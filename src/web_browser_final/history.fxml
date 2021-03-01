@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="web_browser_final.HistoryController">
+   <children>
+      <Label fx:id="label" alignment="CENTER" layoutX="135.0" layoutY="7.0" prefHeight="27.0" prefWidth="334.0" style="-fx-background-radius: 10; -fx-background-color: #F8C471;" text="Your Web Browsing History" textAlignment="CENTER" />
+      <TableView fx:id="hTable" layoutX="2.0" layoutY="41.0" prefHeight="312.0" prefWidth="600.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
+        <columns>
+          <TableColumn fx:id="titleColumn" prefWidth="172.0" text="Title" />
+          <TableColumn fx:id="URLColumn" prefWidth="427.0" text="URL" />
+        </columns>
+      </TableView>
+      <Button fx:id="openButton" layoutX="109.0" layoutY="361.0" mnemonicParsing="false" onAction="#openPage" prefHeight="34.0" prefWidth="72.0" text="Open" />
+      <Button fx:id="refreshButton" layoutX="433.0" layoutY="361.0" mnemonicParsing="false" onAction="#refreshHistory" prefHeight="34.0" prefWidth="72.0" text="Rerfresh" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="web_browser_final.FXMLDocumentController">
+  <tabs>
+    <Tab fx:id="tab1" text="Adit's Browser">
+      <content>
+        <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+<TextField fx:id="txtURL" layoutX="71.0" layoutY="2.0" onAction="#goAction" prefHeight="25.0" prefWidth="189.0" promptText="https://" style="-fx-background-color: #D5F5E3;">
+
+                        </TextField>
+                        <Button fx:id="goButton" layoutX="266.0" layoutY="2.0" mnemonicParsing="false" onAction="#goAction" style="-fx-background-color: #D4E6F1;" text="GO">
+ 
+                        </Button>
+                        <TextField fx:id="googleSearch" alignment="CENTER" layoutX="319.0" layoutY="2.0" onAction="#GoGoogle" prefHeight="25.0" prefWidth="115.0" promptText="Google..." style="-fx-background-color: #FADBD8;">
+
+                        </TextField>
+                        <Button fx:id="searchButton" layoutX="437.0" layoutY="2.0" mnemonicParsing="false" onAction="#GoGoogle" style="-fx-background-color: #E8DAEF;" text="SEARCH">
+
+                        </Button>
+                        <Button fx:id="historyButton" layoutX="497.0" layoutY="2.0" mnemonicParsing="false" onAction="#viewhistory" text="HISTORY" />
+                  <WebView fx:id="webView" layoutX="177.0" layoutY="31.0" prefHeight="340.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0" />
+                  <Button fx:id="backButton" layoutX="5.0" layoutY="2.0" mnemonicParsing="false" onAction="#backFunction" text="&lt;-" />
+                  <Button fx:id="forwardButton" layoutX="35.0" layoutY="2.0" mnemonicParsing="false" onAction="#forwardFunction" text="-&gt;" />
+                  <Button fx:id="newTabButton" layoutX="560.0" layoutY="2.0" mnemonicParsing="false" onAction="#openTab" prefHeight="25.0" prefWidth="44.0" text="NEW" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
